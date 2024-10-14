@@ -216,6 +216,52 @@ int main()
      
 }*/
 
+/*class person {
+
+    //properties
+
+    private:
+    int health;
+    public:
+    char level;
+
+    //parameterised constructor
+    person(int health)
+    {
+        cout << "this -> " << this << endl;
+        this -> health = health;
+    }
+
+    void print() {
+        cout << level << endl;
+    }
+
+    int getHealth(){
+        return health;
+    }
+
+    char getLevel() {
+        return level;
+    }
+
+    void setHealth(int h) {
+        health = h;
+    }
+    void setLevel(char ch) {
+        level = ch;
+    }
+
+};*/
+
+/*int main() {
+    person a(10);
+    cout << "Address of a : " << &a << endl;
+
+    //dynamically
+    person *h = new person(11);
+
+    
+}*/
 class person {
 
     //properties
@@ -228,7 +274,13 @@ class person {
     //parameterised constructor
     person(int health)
     {
-        health = health;
+        this -> health = health;
+    }
+
+    person(int health,char level)
+    {
+        this -> level = level;
+        this -> health = health;
     }
 
     void print() {
@@ -251,3 +303,18 @@ class person {
     }
 
 };
+
+int main() 
+{
+    person a(10);
+    //cout << "Address of a : " << &a << endl;
+    a.print();
+
+    //dynamically
+    person *h = new person(11);
+    h->print();
+    
+    person temp(22 , 'B');
+    temp.print();
+
+}
