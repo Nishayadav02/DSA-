@@ -75,7 +75,7 @@ using namespace std;
 }*/
 
 
-int main()
+/*int main()
 {
     vector<int>arr;
     arr.push_back(2);
@@ -107,4 +107,7 @@ int main()
         cout << *it << " ";
     }
 
+}*/
+int main(){
+    
 }
