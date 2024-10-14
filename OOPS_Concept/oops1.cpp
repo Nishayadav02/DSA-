@@ -271,6 +271,10 @@ class person {
     public:
     char level;
 
+    person() {
+        cout << "simple constructor called" << endl;
+    }
+
     //parameterised constructor
     person(int health)
     {
@@ -284,7 +288,8 @@ class person {
     }
 
     void print() {
-        cout << level << endl;
+        cout << "health " << this->health << endl;
+        cout << "level " << this->level << endl;
     }
 
     int getHealth(){
@@ -304,8 +309,7 @@ class person {
 
 };
 
-int main() 
-{
+/*int main() {
     person a(10);
     //cout << "Address of a : " << &a << endl;
     a.print();
@@ -317,4 +321,19 @@ int main()
     person temp(22 , 'B');
     temp.print();
 
+}*/
+
+int main() {
+
+    // person a;
+    // a.setHealth(32);
+    // a.setLevel('C');
+
+    // alternate method instead of these three lines
+    person a(32 , 'C');
+    a.print();
+
+    person b(a);
+
+    b.print();
 }
