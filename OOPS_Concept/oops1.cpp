@@ -332,7 +332,8 @@ int main() {
     // alternate method instead of these three lines
     person a(32 , 'C');
     a.print();
-
+    
+    //copy constructor
     person b(a);
 
     b.print();
