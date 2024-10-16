@@ -262,6 +262,84 @@ int main()
 
     
 }*/
+/*class person {
+
+    //properties
+
+    private:
+    int health;
+    public:
+    char level;
+
+    person() {
+        cout << "simple constructor called" << endl;
+    }
+
+    //parameterised constructor
+    person(int health)
+    {
+        this -> health = health;
+    }
+
+    person(int health,char level)
+    {
+        this -> level = level;
+        this -> health = health;
+    }
+
+
+    void print() {
+        cout << "health " << this->health << endl;
+        cout << "level " << this->level << endl;
+    }
+
+    int getHealth(){
+        return health;
+    }
+
+    char getLevel() {
+        return level;
+    }
+
+    void setHealth(int h) {
+        health = h;
+    }
+    void setLevel(char ch) {
+        level = ch;
+    }
+
+};*/
+/*int main() {
+    person a(10);
+    //cout << "Address of a : " << &a << endl;
+    a.print();
+
+    //dynamically
+    person *h = new person(11);
+    h->print();
+    
+    person temp(22 , 'B');
+    temp.print();
+
+}*/
+
+/*int main() {
+
+    // person a;
+    // a.setHealth(32);
+    // a.setLevel('C');
+
+    // alternate method instead of these three lines
+    person a(32 , 'C');
+    a.print();
+    
+    //copy constructor
+    person b(a);
+
+    b.print();
+}*/
+
+
 class person {
 
     //properties
@@ -287,6 +365,14 @@ class person {
         this -> health = health;
     }
 
+    // copy constructor
+    person(person& temp) {
+        cout << "copy constructor called" << endl;
+        this->health = temp.health;
+        this->level = temp.level;
+    }
+
+
     void print() {
         cout << "health " << this->health << endl;
         cout << "level " << this->level << endl;
@@ -308,20 +394,6 @@ class person {
     }
 
 };
-
-/*int main() {
-    person a(10);
-    //cout << "Address of a : " << &a << endl;
-    a.print();
-
-    //dynamically
-    person *h = new person(11);
-    h->print();
-    
-    person temp(22 , 'B');
-    temp.print();
-
-}*/
 
 int main() {
 
