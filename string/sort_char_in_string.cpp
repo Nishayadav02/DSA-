@@ -1,4 +1,7 @@
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
+
+Time Complexity: O(n^2) (nested for loops)
+Space Complexity: O(1) in C++
 
 using namespace std;
 string solve(string str, int n) {
@@ -26,5 +29,27 @@ int main() {
 
   cout << "After sorting: " << "\n";
   cout << solve(str, n) << "\n";
+  return 0;
+}*/
+
+
+#include<bits/stdc++.h>
+
+// Time Complexity: O(n * log n)
+// Space Complexity: O(1) in C++
+
+using namespace std;
+string solve(string str) {
+  sort(str.begin(), str.end());
+  return str;
+}
+int main() {
+
+  // Input string
+  string str = "zxcbg";
+  int length = str.length();
+
+  cout << "String after sorting:" << "\n";
+  cout << solve(str) << "\n";
   return 0;
 }
