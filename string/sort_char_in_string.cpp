@@ -55,27 +55,30 @@ int main() {
 }*/
 
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
-int main() {
-    string str = "character"; 
-    vector<int> count(26, 0); 
+void sortString(string &str) {
+    int count[26] = {0}; 
 
-    
     for (int i = 0; i < str.length(); i++) {
         char ch = str[i]; 
         count[ch - 'a']++; 
     }
 
-    
-    string sortedStr;
+    int index = 0; 
     for (int i = 0; i < 26; i++) {
-        for (int j = 0; j < count[i]; j++) {
-            sortedStr += 'a' + i; 
+        while (count[i] > 0) {
+            str[index++] = 'a' + i; 
+            count[i]--; 
         }
     }
+}
 
-    cout << "Sorted string: " << sortedStr << endl; 
+int main() {
+    string str = "character"; 
+    sortString(str);
+    
+    cout << "Sorted string: " << str << endl; 
     return 0;
 }
