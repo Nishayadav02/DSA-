@@ -33,7 +33,7 @@ int main() {
 }*/
 
 
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 
 // Time Complexity: O(n * log n)
 // Space Complexity: O(1) in C++
@@ -52,4 +52,30 @@ int main() {
   cout << "String after sorting:" << "\n";
   cout << solve(str) << "\n";
   return 0;
+}*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    string str = "character"; 
+    vector<int> count(26, 0); 
+
+    
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str[i]; 
+        count[ch - 'a']++; 
+    }
+
+    
+    string sortedStr;
+    for (int i = 0; i < 26; i++) {
+        for (int j = 0; j < count[i]; j++) {
+            sortedStr += 'a' + i; 
+        }
+    }
+
+    cout << "Sorted string: " << sortedStr << endl; 
+    return 0;
 }
