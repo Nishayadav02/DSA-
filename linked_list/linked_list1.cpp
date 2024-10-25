@@ -292,7 +292,7 @@ class Node {
         this -> next = NULL;
     }
 
-};
+}; 
 
 void insertAtHead(Node* &head , int d){
     Node* temp = new Node(d);
@@ -337,13 +337,11 @@ void insertAtPosition(Node* &tail , Node* &head , int position , int d){
         return ;
     }
 
-    //crreating a node for d
+    //creating a node for d
     Node* nodeToInsert = new Node(d);
     nodeToInsert -> next = temp -> next;
     temp -> next = nodeToInsert;
-}
-
-
+} 
 
 int main() {
     Node * node1 = new Node(10);
