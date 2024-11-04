@@ -2,27 +2,52 @@
 #include<stack>
 using namespace std;
 
-int main()
-{
-    string str = "nisha";
+void Reverse(stack<int> &St) {
+    stack<int> s;
 
-    stack<char> s;
-
-    for(int i = 0; i < str.length(); i++){
-        char ch = str[i];
-        s.push(ch);
+    // Move elements from the original stack to the auxiliary stack
+    while (!St.empty()) {
+        int num = St.top();
+        St.pop();
+        s.push(num);
     }
 
-    string ans = "";
-
-    while(!s.empty()){
-        char ch = s.top();
-        ans.push_back(ch);
-
+    // Move elements back to the original stack
+    while (!s.empty()) {
+        St.push(s.top());
         s.pop();
     }
+}
 
-    cout << "answer is : " << ans << endl;
+int main(){
+    stack<int> myStack;
+
+    // Push some elements onto the stack
+    myStack.push(1);
+    myStack.push(2);
+    myStack.push(3);
+    myStack.push(4);
+    myStack.push(5);
+
+    cout << "Original stack: ";
+    // Display original stack
+    stack<int> tempStack = myStack; // Temporary stack to display elements
+    while (!tempStack.empty()) {
+        cout << tempStack.top() << " ";
+        tempStack.pop();
+    }
+    cout << endl;
+
+    // Reverse the stack
+    Reverse(myStack);
+
+    cout << "Reversed stack: ";
+    // Display reversed stack
+    while (!myStack.empty()) {
+        cout << myStack.top() << " ";
+        myStack.pop();
+    }
+    cout << endl;
 
     return 0;
 }
