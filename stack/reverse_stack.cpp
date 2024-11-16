@@ -2,7 +2,7 @@
 #include<stack>
 using namespace std;
 
-void Reverse(stack<int> &St) {
+/*void Reverse(stack<int> &St) {
     stack<int> s;
 
     // Move elements from the original stack to the auxiliary stack
@@ -50,4 +50,9 @@ int main(){
     cout << endl;
 
     return 0;
+}*/
+
+int main(){
+    cout << ((10) % 6) << endl;
+    cout << ((-10) % 6) << endl;
 }
