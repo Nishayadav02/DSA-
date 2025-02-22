@@ -32,7 +32,7 @@ class Node{
     // Head -> next = NULL;
 }*/
 
-int main() {
+/*int main() {
     Node * Head;
     if(Head == NULL) {
         Head = new Node(4);
@@ -47,7 +47,7 @@ int main() {
     cout << Head -> data << endl;
     cout << Head -> next << endl;
 
-}
+}*/
 
 
 //conversion of array to linked list
