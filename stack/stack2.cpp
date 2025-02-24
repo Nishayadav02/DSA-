@@ -83,4 +83,5 @@ int main() {
     cout << s.IsSize() << endl;
     cout << s.peek() << endl;
     cout << s.IsEmpty() << endl;
+    
 }
