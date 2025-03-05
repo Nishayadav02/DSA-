@@ -90,6 +90,12 @@ int main() {
     q.pop();
     int x = q.start();
     if(!q.IsEmpty()){
-        cout <<x << " " ;
+        cout << x << endl;
     }
+    bool empty = q.IsEmpty();
+    bool full = q.IsFull();
+    
+    cout << "Is queue empty? " << (empty ? "Yes" : "No") << endl;
+    cout << "Is queue full? " << (full ? "Yes" : "No") << endl;
+    
 }
